@@ -1,0 +1,18 @@
+html,body,#root{
+  margin:10;
+  padding:0;
+  height: 100%;
+  text-align: center;
+  font-style: italic;
+  color: black;
+  background-image: linear-gradient(45deg, rgb(218, 241, 241), white);
+}
+
+.Box{
+  display: inline-block;
+  border: 1px solid black;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+}

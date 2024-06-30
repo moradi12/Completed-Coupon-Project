@@ -1,0 +1,51 @@
+/* Company List */
+
+.company-list {
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    /* Use flexbox layout for the container */
+    flex-wrap: wrap;
+    /* Allow items to wrap to multiple rows */
+    justify-content: space-around;
+    /* Distribute items evenly in the row */
+}
+
+
+/* Company Item */
+
+.company-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+    flex: 1 0 33.33%;
+    /* Make items flex-basis 33.33% and shrink to fit */
+    margin: 10px;
+    /* Add margin between items */
+}
+
+
+/* Company Item Title (optional) */
+
+.company-item h6 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* Company Info (optional) */
+
+.company-info {
+    font-weight: bold;
+    background-color: #e9e9e9;
+    padding: 6px 2px;
+    border-radius: 1px;
+    margin-bottom: 1px;
+}

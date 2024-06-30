@@ -1,0 +1,68 @@
+/* Basic styles */
+
+body {
+    margin: 0;
+    /* Remove default body margins */
+    font-family: sans-serif;
+    /* Set a default font family */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    /* Center the form horizontally */
+    width: fit-content;
+    /* Adjust width as needed */
+    max-width: 500px;
+    /* Set a maximum width for responsiveness */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45A049;
+}
+
+.MuiButton-root {
+    /* Your button styles here (e.g., padding: 5px 10px; font-size: 14px;) */
+}
+
+
+/* Error and success messages */
+
+p {
+    margin-bottom: 10px;
+}
+
+p.error {
+    color: red;
+}
+
+p.success {
+    color: green;
+}

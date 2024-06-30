@@ -1,0 +1,18 @@
+.Menu {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    background-color: rgb(5, 96, 90); /* Green background */
+    padding: 10px; /* Add some padding for spacing */
+  }
+  
+  .Menu a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* White text color */
+    margin: 0 10px; /* Add margin around links */
+  }
+  
+  .Menu a:hover {
+    color: #ffeb3b; /* Yellow text color on hover */
+  }
+  

@@ -1,0 +1,30 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    /* Optional: add some padding */
+}
+
+.header-spacer {
+    flex: 1;
+    /* Takes up space on the left side */
+}
+
+.header-title {
+    margin: 0;
+    /* Remove default margin from h1 */
+    text-align: center;
+    /* Center text */
+    flex: 1;
+    /* Ensure the title takes up available space */
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+}

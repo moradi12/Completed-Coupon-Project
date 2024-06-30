@@ -1,0 +1,96 @@
+/* General styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Container styles */
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+
+/* Loading and error messages */
+
+.loading,
+.error {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+
+/* Customer list */
+
+.customer-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.customer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+
+.customer-item:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+.customer-name {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+
+/* Delete button */
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.delete-button:focus {
+    outline: none;
+}

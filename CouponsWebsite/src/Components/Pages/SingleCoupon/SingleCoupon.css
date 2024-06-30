@@ -1,0 +1,39 @@
+.SingleCoupon {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.SingleCoupon h1 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.SingleCoupon img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.SingleCoupon p {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.SingleCoupon .discount {
+    color: #e74c3c;
+    /* Red color for discount */
+    font-weight: bold;
+}
+
+.SingleCoupon img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

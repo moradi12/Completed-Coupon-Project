@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+    .MainLayout {
+        grid-template-rows: auto 1fr auto;
+        /* Adjust row sizes for smaller screens */
+    }
+    .Menu {
+        flex-direction: column;
+        /* Stack menu items vertically on small screens */
+        align-items: flex-start;
+        /* Align menu items to the left */
+    }
+    .Box {
+        /* Adjust box styles for smaller screens (optional) */
+        width: 100%;
+        /* Make boxes full width */
+    }
+}
