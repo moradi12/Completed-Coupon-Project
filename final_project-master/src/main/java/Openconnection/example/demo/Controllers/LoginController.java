@@ -56,22 +56,5 @@ public class LoginController {
         }
     }
 
-//    private HttpHeaders getHeaders(String jwt){
-//        HttpHeaders headers = new HttpHeaders();
-//        String userJWT = jwt.split(" ")[1];
-//        if (jwtUtil.validateToken(userJWT)){
-//            headers.set("Authorization", "Bearer "+jwtUtil.generateToken(userJWT));
-//        }
-//        return headers;
-//    }
-
-//    private HttpHeaders getHeaders(String jwt){
-//        HttpHeaders headers = new HttpHeaders();
-//        String userJWT = jwt.split(" ")[1];
-//        if (jwtUtil.validateToken(userJWT)){
-//            headers.set("Authorization", "Bearer "+jwtUtil.generateToken(userJWT));
-//        }
-//        return headers;
-//    }
 
 }

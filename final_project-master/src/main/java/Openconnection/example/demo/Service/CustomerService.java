@@ -116,18 +116,6 @@ public class CustomerService {
     }
 
 
-//    public void purchaseCoupon(int couponID, int customerID) throws CouponNotFoundException, CouponOutOfStockException, CustomerExceptionException {
-//        Optional<Customer> optionalCustomer = customerRepository.findById(customerID);
-//        if (optionalCustomer.isEmpty()) {
-//            throw new CustomerExceptionException(ErrMsg.CUSTOMER_NOT_FOUND);
-//        }
-//        Optional<Coupon> optionalCoupon = couponRepository.findById(couponID);
-//        if (optionalCoupon.isEmpty()) {
-//            throw new CouponNotFoundException(ErrMsg.COUPON_NOT_FOUND.getMsg());
-//        }
-//        couponService.addCouponPurchase(couponID, customerID);
-//    }
-
     public List<Coupon> getCustomerCoupons(int customerID) throws CustomerExceptionException {
         Optional<Customer> optionalCustomer = customerRepository.findById(customerID);
         if (optionalCustomer.isEmpty()) {

@@ -36,16 +36,6 @@ public class CompanyService {
         }
     }
 
-//    public boolean Login(String email, String password) throws AdminException, CompanyNotFoundException, CustomerExceptionException {
-//        Company company = companyRepository.findByEmailAndPassword(email, password);
-//        if (company == null) {
-//            throw new CompanyNotFoundException(ErrMsg.COMPANY_NOT_FOUND.getMsg());
-//        }
-//        this.companyId = company.getId();
-//        return true;
-//
-//    }
-
     public void addCoupon(Coupon coupon) throws CouponNotFoundException {
         int id = coupon.getId();
         if (couponRepository.existsByTitleAndCompanyId(coupon.getTitle(), coupon.getCompanyId())) {
@@ -217,29 +207,7 @@ public class CompanyService {
         });
 
 
-///eylon
-//    public void updateCompany(Company company) throws CompanyNotFoundException {
-//        if (!companyRepository.existsById(company.getId())) {
-//            throw new CompanyNotFoundException(ErrMsg.COMPANY_NOT_FOUND.getMsg());
-//        }
-//        companyRepository.findById(companyId).ifPresent(tempComp->{
-//            tempComp.setEmail(company.getEmail());
-//            tempComp.setPassword(company.getPassword());
-//            tempComp.setName(company.getName());
-//            companyRepository.saveAndFlush(company);
-//            System.out.println("Company updated: " + company);
-//        });
-//
     }
-
-    //public void deleteCompany(int companyID) throws CompanyNotFoundException {
-    //    if (!companyRepository.existsById(companyID)) {
-    //        throw new CompanyNotFoundException(ErrMsg.COMPANY_NOT_FOUND.getMsg());
-    //    }
-    //    companyRepository.deleteById(companyID);
-    //    System.out.println("Company deleted with ID: " + companyID);
-    //}//
-
 
     public void deleteCompany(int companyId) throws CompanyNotFoundException, CouponNotFoundException {
         Company company = companyRepository.findById(companyId)

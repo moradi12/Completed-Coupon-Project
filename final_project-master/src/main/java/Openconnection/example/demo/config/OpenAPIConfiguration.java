@@ -26,7 +26,7 @@ public class OpenAPIConfiguration {
     public OpenAPI defineOpenAPI(@Value("springdoc-openapi-ui") String serviceTitle, @Value("1.6.12") String serviceVersion){
         Server server = new Server();
         server.setUrl("http://localhost:8080");
-        server.setDescription("our Coupon api for development, tamir the king !!");
+        server.setDescription("our Coupon api for development, tamir  !!");
 
         Contact myContact = new Contact();
         myContact.setName("Tamir Moradi");

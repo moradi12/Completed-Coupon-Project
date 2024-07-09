@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
 
 import java.sql.Date;
 
-//TODO ; DELETE IS NOT WORKING FROM SWAGGER FOR SOME REASON
 
 @RequiredArgsConstructor
 @Component

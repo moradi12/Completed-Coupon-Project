@@ -19,13 +19,7 @@ public class LoginTester implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        //UserDetails userDetails = new UserDetails("Customer@customer.com","password", UserType.CUSTOMER);
-        //UserDetails userDetails2 = new UserDetails("Company@Company.com","CompanyPassowrd", UserType.COMPANY);
 
-//        String customerToken = loginService.login(userDetails.getEmail(), userDetails.getPassword());
-//        String companyToken = loginService.login(userDetails2.getEmail(), userDetails2.getPassword());
-//
-//        System.out.println("Customer Token: " + customerToken);
-//        System.out.println("Company Token: " + companyToken);
+
     }
 }
