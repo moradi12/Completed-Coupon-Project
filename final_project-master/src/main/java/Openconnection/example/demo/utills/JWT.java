@@ -120,8 +120,6 @@ public class JWT {
             return headers;
         }
         throw new Exception("Invalid token");
-        //return new ResponseEntity<>(service.getAllSongs(),getHeaders(jwt),HttpStatus.OK);
-
     }
 
 

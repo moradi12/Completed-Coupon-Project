@@ -23,7 +23,7 @@ public class OpenAPIConfiguration {
      * @return OpenAPI object representing the API documentation
      */
     @Bean
-    public OpenAPI defineOpenAPI(@Value("springdoc-openapi-ui") String serviceTitle, @Value("1.6.12") String serviceVersion){
+    public OpenAPI defineOpenAPI(@Value("springdoc-openapi-ui") String serviceTitle, @Value("1.6.12") String serviceVersion) {
         Server server = new Server();
         server.setUrl("http://localhost:8080");
         server.setDescription("our Coupon api for development, tamir  !!");
@@ -50,8 +50,6 @@ public class OpenAPIConfiguration {
                                         .bearerFormat("JWT")
                         )
                 )
-
-//                .security(List.of(new SecurityRequirement().addList(securitySchemeName)))
                 .info(info.version(serviceVersion)).servers(List.of(server));
 
     }

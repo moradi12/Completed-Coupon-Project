@@ -48,6 +48,7 @@ public class CompanyController {
         }
         return new ResponseEntity<>(headers, HttpStatus.FORBIDDEN);
     }
+
     @DeleteMapping("/{companyId}/coupons/{couponId}")
     public ResponseEntity<?> deleteCoupon(@RequestHeader("Authorization") String jwt, @PathVariable int companyId, @PathVariable int couponId) throws CouponNotFoundException {
         String userJwt = jwt.split(" ")[1];
@@ -60,8 +61,7 @@ public class CompanyController {
     }
 
 
-
-        @DeleteMapping("/{companyId}")
+    @DeleteMapping("/{companyId}")
     public ResponseEntity<?> deleteCompany(@PathVariable int companyId) {
         try {
             companyService.deleteCompany(companyId);
@@ -82,14 +82,6 @@ public class CompanyController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
     }
-
-
-
-
-
-
-
-
 
 
     @GetMapping("/{companyId}/coupons/{couponId}")
@@ -119,6 +111,7 @@ public class CompanyController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
+
     @GetMapping("/all")
     public ResponseEntity<?> getAllCompanies() {
         try {
@@ -178,7 +171,6 @@ public class CompanyController {
 
 
 }
-
 
 
 //package Openconnection.example.demo.Controllers;
