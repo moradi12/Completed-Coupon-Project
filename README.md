@@ -3,13 +3,6 @@
 
 The Completed Coupon Project is a full-stack application designed to manage and utilize various coupons efficiently. This system provides a user-friendly interface for multiple roles including customers, admins, companies, and guests. The project leverages JWT for secure authentication and follows RESTful API principles.
 
-## Color Scheme
-- **Primary Color**: #4CAF50 (Green)
-- **Secondary Color**: #FF9800 (Orange)
-- **Accent Color**: #FFC107 (Amber)
-- **Background Color**: #F5F5F5 (Light Grey)
-- **Text Color**: #212121 (Dark Grey)
-
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
