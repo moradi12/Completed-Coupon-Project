@@ -1,7 +1,7 @@
 
 # Completed Coupon Project
 
-This project is a comprehensive coupon management system that allows users to manage and utilize various coupons. It includes both frontend and backend components.
+The Completed Coupon Project is a full-stack application designed to manage and utilize various coupons efficiently. This system provides a user-friendly interface for multiple roles including customers, admins, companies, and guests. The project leverages JWT for secure authentication and follows RESTful API principles.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -57,9 +57,16 @@ This project is a comprehensive coupon management system that allows users to ma
 - The backend API is available at `http://localhost:5000`
 
 ### Main Features
-- **Coupon Management**: Create, edit, delete, and view coupons.
-- **User Authentication**: Register and login functionalities with JWT support.
-- **Admin Dashboard**: Manage users and coupons.
+- **Coupon Management**: Easily create, edit, delete, and view coupons.
+- **User Authentication**: Secure login and registration functionalities with JWT support.
+- **Admin Dashboard**: A robust interface for managing users, coupons, and system settings.
+- **User Roles**: The system supports multiple roles, including:
+  - **Customers**: Users who can view and utilize coupons.
+  - **Admins**: Users with privileges to manage the system and users.
+  - **Companies**: Entities that can create and manage their own coupons.
+  - **Guests**: Users who can browse the available coupons without an account.
+
+This project demonstrates a comprehensive understanding of modern web development technologies, including React, Node.js, Express, and JWT for secure authentication. It's designed to be scalable, efficient, and user-friendly, following RESTful API principles.
 
 ## Contributing
 
@@ -77,5 +84,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgments
 
-- **Libraries**: This project uses [React](https://reactjs.org/), [Node.js](https://nodejs.org/), and [Express](https://expressjs.com/).
-- **Special Thanks**: Thanks to everyone who contributed to the development of this project.
+- **Libraries**: This project utilizes [React](https://reactjs.org/), [Node.js](https://nodejs.org/), [Express](https://expressjs.com/), and other modern web technologies.
+- **Special Thanks**: Special thanks to all contributors and those who provided feedback during the development of this project.
