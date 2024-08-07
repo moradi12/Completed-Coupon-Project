@@ -28,7 +28,7 @@ public class TestCompany implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         try {
-            System.out.println("Adding predefined companies and coupons to the database...\n");
+            System.out.println("Adding predefined companies and coupons to the database....\n");
 
             Company company1 = Company.builder()
                     .id(1)

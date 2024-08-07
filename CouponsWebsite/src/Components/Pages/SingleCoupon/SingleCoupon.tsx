@@ -38,7 +38,7 @@ export function SingleCoupon(props: CouponProps): JSX.Element {
     const userHasCoupon = (couponId: number): boolean => {
         // Logic to check if the user has the coupon
         // This might involve an API call or checking a state that keeps track of user's coupons
-        return true; // Placeholder value for the purpose of this example
+        return true; // Placeholder value for the purpose of this example.
     };
 
     return (
