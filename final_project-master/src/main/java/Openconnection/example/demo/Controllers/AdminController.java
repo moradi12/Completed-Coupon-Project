@@ -61,7 +61,7 @@ public class AdminController {
             adminService.deleteCompany(companyId);
             return new ResponseEntity<>(headers, HttpStatus.OK);
         }
-        return new ResponseEntity<>(headers, HttpStatus.FORBIDDEN);
+        return new ResponseEntity<>(adminService.getAllCompanies(),headers, HttpStatus.FORBIDDEN);
     }
 
 
@@ -182,11 +182,13 @@ public class AdminController {
 
     @DeleteMapping("/customers/{customerId}")
     public ResponseEntity<?> deleteCustomer(@RequestHeader("Authorization") String jwt, @PathVariable int customerId) {
+        HttpHeaders headers = JWT.getHeaders(jwt);
         try {
             String userJwt = jwt.split(" ")[1];
             if (JWT.getUserType(userJwt).equals(UserType.ADMIN.toString())) {
+                List<Customer> customers = adminService.getAllCustomers();
                 adminService.deleteCustomer(customerId);
-                return ResponseEntity.ok("Customer deleted successfully");
+                return new ResponseEntity<>(customers, headers, HttpStatus.OK);
             } else {
                 return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Forbidden: Insufficient privileges");
             }

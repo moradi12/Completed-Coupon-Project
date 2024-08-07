@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import axiosJWT from "../../Utils/axiosJWT";
-import "./AllCustomers.css";
-import { checkData } from "../../Utils/checkData";
-import { notify } from "../../Utils/notif";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { UserType } from "../../Models/UserType";
 import { couponSystem } from "../../Redux/Store";
-import { useNavigate } from "react-router-dom";
+import axiosJWT from "../../Utils/axiosJWT";
+import { checkData } from "../../Utils/checkData";
+import { notify } from "../../Utils/notif";
+import "./AllCustomers.css";
+
 type Customer = {
   customerID: number;
   firstName: string;
@@ -23,11 +24,10 @@ type Coupon = {
 export function AllCustomers(): JSX.Element {
   const [customers, setCustomers] = useState<Customer[]>([]);
   const [loading, setLoading] = useState(true);
-  const [deleteError, setDeleteError] = useState<string | null>(null);
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
   const [deletingCustomerId, setDeletingCustomerId] = useState<number | null>(
     null
-  ); 
+  );
   const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
@@ -66,37 +66,36 @@ export function AllCustomers(): JSX.Element {
     setShowDeleteConfirmation(true);
   };
 
-  const handleConfirmDelete = async () => {
-    if (deletingCustomerId !== null) {
-      try {
-        await axiosJWT.delete(
+  const handleConfirmDelete = () => {
+    deletingCustomerId &&
+      axiosJWT
+        .delete(
           `http://localhost:8080/api/admin/customers/${deletingCustomerId}`
-        );
-        setCustomers(
-          customers.filter(
-            (customer) => customer.customerID !== deletingCustomerId
-          )
-        );
-        notify.success("Customer deleted successfully.");
-        setDeletingCustomerId(null);
-        setShowDeleteConfirmation(false);
-      } catch (error) {
-        console.error("Error deleting customer:", error);
-        const axiosError = error as {
-          response?: { data?: { message?: string } };
-          message?: string;
-        };
-        const errorMessage =
-          axiosError.response?.data?.message ||
-          axiosError.message ||
-          "Failed to delete customer";
-        setDeleteError(`Failed to delete customer: ${errorMessage}`);
-        notify.error("Failed to delete customer.");
-        setDeletingCustomerId(null);
-        setShowDeleteConfirmation(false);
-      }
-    }
+        )
+        .then((res) => {
+          console.log(res.data);
+        })
+        .then(() => {
+          notify.success("Customer deleted successfully.");
+          setDeletingCustomerId(null);
+          setShowDeleteConfirmation(false);
+        })
+        .catch((error) => {
+          console.error("Error deleting customer:", error);
+          const axiosError = error as {
+            response?: { data?: { message?: string } };
+            message?: string;
+          };
+          const errorMessage =
+            axiosError.response?.data?.message ||
+            axiosError.message ||
+            "Failed to delete customer";
+          notify.error(`Failed to delete customer: ${errorMessage}`);
+          setDeletingCustomerId(null);
+          setShowDeleteConfirmation(false);
+        });
   };
+
   const handleCancelDelete = () => {
     setDeletingCustomerId(null);
     setShowDeleteConfirmation(false);
@@ -128,7 +127,6 @@ export function AllCustomers(): JSX.Element {
   return (
     <div className="AllCustomers">
       <h1>All Customers</h1>
-      {deleteError && <p className="delete-error">{deleteError}</p>}
       {customers.map((customer) => (
         <div key={customer.customerID} className="customer-card">
           <p>
