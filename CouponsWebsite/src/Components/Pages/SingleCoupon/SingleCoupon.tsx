@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Coupon } from "../../Models/Coupon";
-import "./SingleCoupon.css";
-import axiosJWT from "../../Utils/axiosJWT";
-import { useSelector } from "react-redux";
-import { RootState } from "../../Redux/RootState";
 import { AxiosError } from "axios";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Coupon } from "../../Models/Coupon";
+import { RootState } from "../../Redux/RootState";
+import axiosJWT from "../../Utils/axiosJWT";
 import { checkData } from "../../Utils/checkData";
 import { notify } from "../../Utils/notif";
+import "./SingleCoupon.css";
 
 interface CouponProps {
     coupon: Coupon;
@@ -45,7 +45,7 @@ export function SingleCoupon(props: CouponProps): JSX.Element {
         <div className="SingleCoupon Box">
             <h1>{props.coupon.title}</h1>
             <hr />
-            <img onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/LM75DIF3ZRB5JMW663ICJYDB5U.jpg&w=500'; }}
+            <img onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwrLMS1VpaC9nqSbV_HndDq5r2ZMmLYR6mUw&s'; }}
             src={props.coupon.image} alt="img"/>
             <p><strong>Coupon ID:</strong> {props.coupon.id}</p>
             <p><strong>Available Amount:</strong> {props.coupon.amount}</p>

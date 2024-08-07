@@ -90,7 +90,7 @@ public class TestCompany implements CommandLineRunner {
                     .discountPercentage(50)
                     .amount(100)
                     .price(50.0)
-                    .image("electronics_sale.jpg")
+                    .image("https://play-lh.googleusercontent.com/5V1EKV4s_zftz-sCjx-_Gdcbug3Q5vfrfz0YhbGaxMs0uy7pmOgCsk1iF1ARsEzdoA")
                     .build();
 
             Coupon coupon2 = Coupon.builder()
@@ -106,7 +106,7 @@ public class TestCompany implements CommandLineRunner {
                     .discountPercentage(10)
                     .amount(50)
                     .price(200.0)
-                    .image("summer_vacation.jpg")
+                    .image("https://expatinsurance.eu/sites/default/files/styles/article_quare/public/2022-07/ExpatCo_HealthySummerBreak_website.jpg?itok=GufBE2fI")
                     .build();
 
             Coupon coupon3 = Coupon.builder()
@@ -122,7 +122,7 @@ public class TestCompany implements CommandLineRunner {
                     .discountPercentage(20)
                     .amount(20)
                     .price(75.0)
-                    .image("fitness_membership.jpg")
+                    .image("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/gym-discount-offer-instagram-post-template-design-8a5b8dfdad67f5590768c6fa9875ef54_screen.jpg?ts=1561443836")
                     .build();
 
             Coupon coupon4 = Coupon.builder()
@@ -139,7 +139,7 @@ public class TestCompany implements CommandLineRunner {
                     .uniteAvailableSql(false)
                     .discountPercentage(60)
                     .price(100.0)
-                    .image("special_travel_package.jpg")
+                    .image("https://d1csarkz8obe9u.cloudfront.net/posterpreviews/summer-vacation-booking-ad-instagram-post-design-template-d5c07ab50e2cfdafa4dcc7a5ec60d6f5_screen.jpg?ts=1684615022")
                     .build();
 
             Coupon coupon5 = Coupon.builder()
